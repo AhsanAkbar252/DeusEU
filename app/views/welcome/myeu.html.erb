@@ -1,0 +1,57 @@
+ <div class="fregment-account">
+     <div class="screen">
+        <div class="container">
+            <h2 class="a-title">My Deus Enterepreneur University</h2>
+
+            <div class="acc-main">
+                <p class="acc-title">ACCOUNT</p>
+                <% if user_signed_in? %>
+                    <div class="option logout">
+                        <p align="left"><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+                        <i class="far fa-chevron-right"></i>
+                    </div>
+
+                    <div class="option edit">
+                        <p align="left"><%= link_to 'Edit profile', edit_user_registration_path%></p>
+                        <i class="far fa-chevron-right"></i>
+                    </div>
+
+                    <div class="option">
+                        <p align="left"><%= link_to 'Documents', documents_path %></p>
+                        <i class="far fa-chevron-right"></i>
+                    </div>
+                <% else %>
+                    <div class="option login">
+                        <p align="left"><%= link_to 'Login', new_user_session_path %></p>
+                        <i class="far fa-chevron-right"></i>
+                    </div>
+
+                    <div class="option create">
+                        <p align="left"><%= link_to 'Create Account', new_user_registration_path %></p>
+                        <i class="far fa-chevron-right"></i>
+                    </div>
+                <% end %>
+
+
+
+
+                <p class="acc-title">ABOUT</p>
+
+                <div class="option">
+                    <p>Support</p>
+                    <i class="far fa-chevron-right"></i>
+                </div>
+
+                <div class="option">
+                    <p>Terms & Conditions</p>
+                    <i class="far fa-chevron-right"></i>
+                </div>
+
+                <div class="option">
+                    <p>Privacy policy</p>
+                    <i class="far fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>

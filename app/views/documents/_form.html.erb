@@ -1,0 +1,49 @@
+<div class="fregment-login">
+    <div class="screen">
+        <div class="shape">
+            <%= link_to :back do %>
+              <i class="fa fa-chevron-left back2"></i>
+            <% end %>
+            <img src="../../images/shape1.svg" alt="" class="shape1">
+            <img src="../../images/shape2.svg" alt="" class="shape2">
+            <div class="container">
+                <div class="l-page">
+                <h2 class="title ttt">Create Document</h2>
+
+                <div class="user-input">
+                    <%= form_with(model: document) do |form| %>
+                      <% if document.errors.any? %>
+                      <div id="error_explanation">
+                        <h2><%= pluralize(document.errors.count, "error") %> prohibited this section from being saved:</h2>
+
+                        <ul>
+                          <% document.errors.each do |error| %>
+                            <li><%= error.full_message %></li>
+                          <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+
+                    <div class="field">
+                      <%= form.text_field :title, class: 'input',placeholder: 'Document Title' %>
+                    </div>
+
+                    <div class="field">
+                      <%= form.file_field :file, class: 'input' %>
+                    </div>
+
+
+                    <%= form.submit class: 'user-input button ' %>
+                  <% end %>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

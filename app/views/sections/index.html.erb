@@ -1,0 +1,20 @@
+ <div class="fregment-course">
+     <div class="screen">
+         <div class="container">
+             <h2 class="title tt">Gyms  <% if current_user.admin? %><%= link_to 'New Gym', new_section_path, class: 'btn btn-primary' %><% end %></h2>
+             <div class="course-main">
+                <% @sections.each do |section| %>
+                    <%= link_to section_path(section) do %>
+                    <div class="items mr card bg-dark text-white" style="border-radius: 10px; margin-bottom: 2%;">
+                      <img src="images/items.png" class="card-img"  alt="...">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title before"><%= section.name %></h5>
+                        <p class="card-text after"><%= section.videos.sum(:minutes) %> MIN</p>
+                      </div>
+                    </div>
+                    <% end %>
+                <% end %>
+             </div>
+         </div>
+     </div>
+ </div>

@@ -1,0 +1,28 @@
+ <div class="fregment-account">
+     <div class="screen">
+        <div class="container">
+            <h2 class="a-title">Documents</h2>
+            <% @documents.each do |document| %>
+              <div class="acc-title">
+                  <p><%= document.title %>
+                  <div align="right">
+                  <% if document.file.attached? %>
+                    <%= link_to 'Download', rails_blob_path(document.file, disposition: 'attachment'),class: 'btn btn-sm btn-info' %>
+                    <% if current_user.admin? %>
+                      <%= link_to 'Destroy', document, method: :delete, class: 'btn btn-danger btn-sm' , data: { confirm: 'Are you sure?' }%>
+                    <% end %>
+                  <% end %>
+                </div>
+                </p>
+              </div>
+            <% end %>
+            </div>
+            <% if current_user.admin? %>
+              <div class="actions" align="center">
+                <%= link_to 'New Document', new_document_path, class: 'btn btn-info' %>
+              </div>
+            <% end %>
+        </div>
+     </div>
+ </div>
+

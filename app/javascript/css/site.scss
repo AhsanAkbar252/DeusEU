@@ -1,0 +1,488 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+/* defult css propertis */
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+:root{
+    --black: rgb(3, 3, 3);
+    --blue: #00BFD6;
+    --dblue: #060C23;
+    --gray: #111111;
+}
+body{
+    background: white;
+    color: var(--black);
+}
+.screen{
+    max-width: 768px;
+    margin: auto;
+}
+.container{
+    padding: 0% 5%;
+}
+/* mobile menu bottom */
+.bottom-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    height: 5em;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.151);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.bottom-nav i{
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.bottom-nav a{
+    color: var(--dblue) !important;
+}
+.bottom-nav li{
+    cursor: pointer;
+}
+.bottom-nav i:hover{
+    font-weight: 700;
+}
+.bottom-nav p{
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3em;
+}
+
+.acc-main a{
+    color: var(--black);
+}
+/* banner */
+.banner{
+    background: var(--dblue);
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 2em 0em;
+}
+.logo{
+    width: 6em;
+    margin: auto;
+}
+.logo img{
+    width: 100%;
+}
+.banner h2{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.content p{
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+}
+button{
+    cursor: pointer;
+    background: var(--blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* items */
+.wraper{
+    max-width: 768px;
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 5em;
+}
+.wraper .items{
+    min-width: 300px;
+    position: relative;
+}
+
+
+.before{
+    position: absolute;
+    bottom: 2em;
+    left: 1em;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.after{
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: white;
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+.mr{
+    margin-right: 1em;
+}
+.items img{
+    width: 100%;
+    border-radius: 10px;
+}
+.main{
+    padding: 2em 0em;
+}
+.title{
+    margin-bottom: 1em;
+}
+.fregment-search{
+    margin-bottom: 12em;
+}
+.fregment-account{
+    margin-bottom: 12em;
+}
+.fregment-course{
+    margin-bottom: 6em;
+}
+
+
+
+
+
+
+
+/* search fregment */
+.s-banner{
+    position: relative;
+    height: auto;
+}
+.tt{
+    margin-top: 1em;
+    color: var(--dblue);
+}
+.back{
+    position: absolute;
+    color: white;
+    left: 1em;
+    top: 1em;
+    font-size: 1.3rem;
+}
+.pay{
+    width: 100%;
+    margin-top: 1em;
+    background: transparent;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+.clicked{
+    background: var(--blue);
+    border: 2px solid var(--blue);
+    color: white;
+}
+.clicked:hover{
+    background: var(--blue);
+    color: white;
+}
+.dis-sec{
+    padding: 2em 0em;
+}
+.dis-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.dev{
+    background: rgb(238, 238, 238);
+    color: var(--dblue);
+    font-size: 0.8rem;
+    margin-top: 1em;
+}
+
+
+
+/* intro */
+.intro{
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    bottom: 5em;
+    height: 5em;
+    z-index: 999;
+}
+.intro img{
+    width: 100%;
+}
+.intro-main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    align-items: center;
+    grid-gap: 1em;
+}
+.in p{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.time{
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+.intro i{
+    font-size: 3rem;
+    padding: 10px;
+    color: var(--blue);
+}
+
+.video{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: center;
+    grid-gap: 1em;
+    margin-top: 1em;
+}
+.play{
+    font-size: 2.5rem !important;
+    color: var(--blue) !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+.video h1{
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--dblue);
+}
+.video i{
+    font-size: 1rem;
+    color: var(--gray);
+    background: rgb(219, 219, 219);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* acccount fregment */
+.a-title{
+    font-size: 1rem;
+    text-align: center;
+    padding: 1em 0em;
+}
+.acc-title{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border-bottom: 0.2px solid rgb(219, 219, 219);
+    padding: 0.5em 0em;
+    margin-top: 1.5em;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    padding: 1.2em 0em;
+    border-bottom: 0.2px solid rgb(219, 219, 219);
+}
+.option p{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+/* login fregment */
+.shape{
+    position: relative;
+    width: 100%;
+    padding: 5em 0em;
+    overflow: hidden;
+}
+.back2,.back3{
+    color: var(--dblue);
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 9999;
+    font-size: 1.2rem;
+ }
+ 
+.back, .back2{
+    cursor: pointer;
+}
+.shape1{
+    position: absolute;
+    width: 50%;
+    bottom: -2em;
+    right: 0;
+    z-index: -1;
+    user-select: none;
+}
+.shape2{
+    position: absolute;
+    width: 15%;
+    bottom: 10em;
+    left: 0;
+    z-index: -1;
+    user-select: none;
+}
+.ttt{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.l-page p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.l-page a{
+    color: var(--blue);
+}
+
+.user-input input{
+    width: 100%;
+    margin-top: 1em;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    padding: 1em 1em;
+}
+.user-input .button{
+    width: 100%;
+    margin-top: 2em;
+    background: var(--dblue);
+    color: white;
+}
+form{
+    width: 100%;
+    margin: auto;
+}
+.forgot{
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    font-weight: 700;
+    color: var(--dblue) !important;
+}
+.check{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+.check input{
+    margin-top: 0 !important;
+}
+.check p{
+    font-size: 0.8rem;
+}
+
+/* course */
+.btnn{
+    padding: 1em;
+    margin-right: 10px !important;
+    min-width: fit-content;
+    cursor: pointer;
+}
+.press{
+    background: var(--blue);
+    border-radius: 50px;
+    color: white;
+}
+.btnn:hover{
+    background: var(--blue);
+    border-radius: 50px;
+    color: white;
+}
+.wraper2{
+    max-width: 768px;
+    display: flex; 
+    overflow-x: auto;
+    margin-bottom: 5em;
+}
+.course-main .cou{
+    position: relative;
+}
+.cou img{
+    width: 100%;
+    border-radius: 20px;
+}
+.cou::before{
+    content: "How to manage straches";
+    position: absolute;
+    bottom: 2em;
+    left: 1em;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.cou::after{
+    content: "23 MIN";
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: white;
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+.lockk{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: var(--black);
+    background: rgb(212, 212, 212);
+    padding: 1em;
+    border-radius: 50%;
+}
+@media (min-width:768px) {
+    .intro img{
+        width: 20%;
+    }
+    .video i {
+        padding: 20px;
+    }
+    .check a{
+        color: var(--dblue) !important;
+    }
+    .intro-main{
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        align-items: center;
+        grid-gap: 1em;
+    }
+    
+}
+
+.btn-primary{
+    background: var(--blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+
+
+.video i {
+	color: white !important;
+	background: var(--blue);
+}
+
+nav{
+    padding-top:2%;
+}
+
+.container{
+    margin-bottom:20%;
+}
+
