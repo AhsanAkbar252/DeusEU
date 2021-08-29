@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
 
+gem 'twilio-ruby'
+gem 'phonelib'
 gem 'active_storage_validations'
 
 # Use Active Storage variant

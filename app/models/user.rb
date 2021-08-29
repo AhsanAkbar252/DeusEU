@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: false
   validates :mobile, uniqueness: true
-  validates :username, uniqueness: true
+  # validates :username
 
   # Search user by mobile(not email)
   def self.find_first_by_auth_conditions(warden_conditions)

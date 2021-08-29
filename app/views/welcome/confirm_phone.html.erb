@@ -1,0 +1,21 @@
+<div class="fregment-login">
+    <div class="screen">
+        <div class="shape">
+            <a href="index.html"><i class="far fa-chevron-left back2"></i></a>
+            <img src="../images/shape1.svg" alt="" class="shape1">
+            <img src="../images/shape2.svg" alt="" class="shape2">
+            <div class="container">
+                <div class="l-page">
+                <h2 class="title ttt">Confirm Your Phone Number</h2>
+
+                <div class="user-input">
+                  <%= form_tag('/verify_otp', method: :post) do %>
+                    <%= text_field_tag 'verification_code', nil, placeholder: 'Enter Code' %>
+
+                    <%= submit_tag "Verify", class: 'user-input button ' %>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
